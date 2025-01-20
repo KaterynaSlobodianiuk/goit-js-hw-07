@@ -7,7 +7,7 @@ userNameElem.addEventListener(`input`, onInputChange);
 function onInputChange() {
     const spanValue = document.querySelector(`.js-span-value`);
     spanValue.textContent = userNameElem.value.trim();
-    if (userNameElem === `` || userNameElem.value.split(" ").join("").length === 0) {
+    if (userNameElem.value.trim() === '' || userNameElem.value.split(" ").join("").length === 0) {
      spanValue.textContent = `Anonymous`;
     }
 };
